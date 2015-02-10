@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"> </script>
+
+    <title>Jessica's Burgers</title>
+  </head>
+
+  <body>
+    <h1>Ingredients</h1>
+    
+    <form action="ingredient" id='ingredient-form'>
+		Ingredient: 
+		<input type="text" name="ingredient" id="ingredient"> 
+		Price: $ <input type="text" name="price" id="price">
+		<input type="submit" name="add" value="Add">
+	</form>
+	<br>
+
+	<div id="name" style="float:left; margin:0; width: 20%;"> NAME </div>
+	<div id="price" style="float:left; margin:0;width:20%;"> PRICE </div>
+	<br> <br>
+	
+	<div id="ingredients">
+		{{#each ingredients}}
+		  {{> ingredient}}
+		{{/each}}
+	</div>
+   
+   </body>
+    <script type="text/javascript" src="/javascripts/ingredient.js"> </script>
+</html>
