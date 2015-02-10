@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"> </script>
+    <title>Jessica's Burgers</title>
+  </head>
+
+  <body>
+    <h1>Kitchen</h1>
+
+    <h2>Orders</h2>
+
+    {{#each orders}}
+      
+      <div id="{{_id}}"> 
+        {{#each this.ingredients}}
+      	 {{this.name}} <br>
+        {{/each}} <br>
+        <button class="button" id="{{this._id}}">Completed</button><br><br>
+      </div>
+    
+    {{/each}}
+
+  </body>
+  <script type="text/javascript" src="/javascripts/kitchen.js"> </script>
+</html>
